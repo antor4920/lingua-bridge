@@ -33,21 +33,21 @@ const coursesData: Course[] = [
   {
     id: 4,
     title: "English Grammar Essentials",
-    level: "Beginner",
+    level: "Association 1",
     category: "english",
     image: "https://images.pexels.com/photos/4144923/pexels-photo-4144923.jpeg",
   },
   {
     id: 5,
     title: "Everyday English Conversation",
-    level: "Intermediate",
+    level: "Association 2",
     category: "english",
     image: "https://images.pexels.com/photos/4240506/pexels-photo-4240506.jpeg",
   },
   {
     id: 6,
     title: "Business English & Email Writing",
-    level: "Advanced",
+    level: "Association 3",
     category: "english",
     image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
   },
@@ -65,9 +65,9 @@ export default function Courses() {
     <main className="px-6 py-20 bg-gray-100 min-h-screen">
       {/* ================= HEADER ================= */}
       <header className="text-center mb-12">
-        <h1 className="text-4xl font-bold mb-4">Our Courses</h1>
+        <h1 className="text-4xl font-bold mb-4">Courses</h1>
         <p className="text-gray-600 max-w-2xl mx-auto">
-          Choose a course and start your journey toward fluency in Japanese or English.
+          Choose a course and start your journey toward fluency in Japanese.
         </p>
       </header>
 
@@ -101,7 +101,7 @@ export default function Courses() {
               : "bg-white border border-gray-300 text-gray-600 hover:bg-gray-200"
           }`}
         >
-          English 🇬🇧
+          Associations
         </button>
       </div>
 
@@ -119,14 +119,14 @@ export default function Courses() {
             />
 
             <div className="p-5">
-              <h3 className="text-xl font-bold mb-2">{course.title}</h3>
-              <p className="text-sm text-gray-500 mb-4">{course.level} Level</p>
+              {/* <h3 className="text-xl font-bold mb-2">{course.title}</h3> */}
+              <p className="text-sm text-gray-500 mb-4">{course.level}</p>
 
               <a
                 href={`/courses/${course.id}`}
                 className="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition"
               >
-                View Details
+                Link
               </a>
             </div>
           </div>

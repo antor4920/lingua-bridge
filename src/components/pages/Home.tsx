@@ -57,34 +57,36 @@ export default function Home() {
         <div className="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
           {/* Japanese Courses */}
           <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
-            <h3 className="text-2xl font-bold mb-4">🇯🇵 Japanese Courses</h3>
+            <h3 className="text-2xl font-bold mb-4">🇯🇵 Online Japanese Courses</h3>
             <ul className="text-gray-700 space-y-2">
               <li>• Hiragana & Katakana for Beginners</li>
-              <li>• JLPT Preparation (N5 - N1)</li>
+              <li>• Vocabulary</li>
               <li>• Conversational Japanese</li>
+              <li>• Flexible Learning & Self-Study</li>
             </ul>
-            <a
+            {/* <a
               href="/courses"
               className="inline-block mt-4 text-blue-600 font-semibold hover:underline"
             >
               View All →
-            </a>
+            </a> */}
           </div>
 
           {/* English Courses */}
           <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
-            <h3 className="text-2xl font-bold mb-4">🇬🇧 English Courses</h3>
+            <h3 className="text-2xl font-bold mb-4">🇬🇧 Realtime offline Courses</h3>
             <ul className="text-gray-700 space-y-2">
-              <li>• English Foundation & Grammar</li>
-              <li>• Everyday Conversation</li>
-              <li>• Business English & Email Writing</li>
+              <li>• Speaking & Listening</li>
+              <li>•  Reading & Writing</li>
+              <li>• Grammar & Vocabulary</li>
+              <li>• Japanese Culture & Life Skills</li>
             </ul>
-            <a
+            {/* <a
               href="/courses"
               className="inline-block mt-4 text-blue-600 font-semibold hover:underline"
             >
               View All →
-            </a>
+            </a> */}
           </div>
         </div>
       </section>

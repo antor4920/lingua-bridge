@@ -1,55 +1,10 @@
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { teachersData } from "./TeachersData";
 
-interface Teacher {
-  id: number;
-  name: string;
-  subject: string;
-  image: string;
-  description: string;
-  socials?: {
-    facebook?: string;
-    instagram?: string;
-    linkedin?: string;
-  };
-}
 
-const teachersData: Teacher[] = [
-  {
-    id: 1,
-    name: "Yuki Nakamura",
-    subject: "Native Japanese Instructor",
-    image: "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg",
-    description:
-      "Specialist in conversational Japanese and JLPT preparation with 5+ years of teaching experience.",
-    socials: {
-      instagram: "https://instagram.com",
-      linkedin: "https://linkedin.com",
-    },
-  },
-  {
-    id: 2,
-    name: "Emily Johnson",
-    subject: "Certified English Tutor",
-    image: "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg",
-    description:
-      "Experienced ESL instructor helping students improve speaking, grammar, and business English.",
-    socials: {
-      facebook: "https://facebook.com",
-      linkedin: "https://linkedin.com",
-    },
-  },
-  {
-    id: 3,
-    name: "Satoshi Tanaka",
-    subject: "JLPT Exam Specialist",
-    image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg",
-    description:
-      "JLPT-focused teaching with advanced grammar, vocabulary building, and mock testing strategies.",
-    socials: {
-      instagram: "https://instagram.com",
-    },
-  },
-];
+
+
 
 export default function Teachers() {
   return (
@@ -101,9 +56,13 @@ export default function Teachers() {
                 )}
               </div>
 
-              <button className="mt-5 w-full px-5 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition">
-                Book a Lesson
-              </button>
+             <Link
+  to={`/teachers/${teacher.id}`}
+  className="mt-5 w-full block px-5 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition text-center"
+>
+  Book A Lesson Through Email
+</Link>
+
             </div>
           </div>
         ))}
