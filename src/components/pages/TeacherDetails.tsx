@@ -34,14 +34,14 @@ export default function TeacherDetails() {
           <img
             src={teacher.image}
             alt={teacher.name}
-            className="w-full h-96 object-cover rounded-xl shadow-sm"
+            className="w-full h-130 object-cover rounded-xl shadow-sm"
           />
         </div>
 
         {/* RIGHT — Teacher Info */}
         <div className="md:w-1/2">
           <h1 className="text-4xl font-bold">{teacher.name}</h1>
-          <p className="text-xl text-blue-600 mt-1">{teacher.subject}</p>
+          {/* <p className="text-xl text-blue-600 mt-1">{teacher.subject}</p> */}
 
           <p className="mt-4 text-gray-700 leading-relaxed">{teacher.description}</p>
 
@@ -60,7 +60,7 @@ export default function TeacherDetails() {
           {/* Lessons */}
           {teacher.lessons && (
             <div className="mt-6">
-              <h2 className="text-2xl font-semibold mb-2">Lessons Offered</h2>
+              <h2 className="text-2xl font-semibold mb-2">Volunteer Course Schedule</h2>
               <ul className="list-disc ml-6 text-gray-700">
                 {teacher.lessons.map((lesson, i) => (
                   <li key={i}>{lesson}</li>
@@ -69,10 +69,10 @@ export default function TeacherDetails() {
             </div>
           )}
 
-          {/* Email */}
-          <p className="mt-6 text-lg">
-            <strong>Email:</strong>{" "}
-            <span className="text-blue-700">{teacher.email}</span>
+        
+           <p className="mt-6 text-xs">
+            <strong>Registration Method:</strong>{" "}
+            <span className="text-gray-700">{teacher.Registration}</span>
           </p>
 
           {/* Confirm Button */}

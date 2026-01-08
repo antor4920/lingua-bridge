@@ -1,46 +1,61 @@
+import sensei1 from "../../assets/image.png"
+import sensei2 from "../../assets/sensei2.jpg"
+import sensei3 from "../../assets/sensei3.jpg"
+// import demo from "../../assets/picdemo.jpg"
+import long from "../../assets/long.jpeg"
+
 export const teachersData = [
   {
     id: 1,
-    name: "Yuki Nakamura",
-    subject: "Native Japanese Instructor",
-    image: "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg",
+    name: "Mr. Shao",
+ 
+    image: sensei1,
     description:
-      "Specialist in conversational Japanese and JLPT preparation with 5+ years of teaching experience.",
-    email: "yuki@example.com",
-    lessons: ["JLPT N5–N3", "Conversation Practice", "Daily Japanese"],
-    abilities: ["Pronunciation", "Grammar", "Speaking"],
-    socials: {
-      instagram: "https://instagram.com",
-      linkedin: "https://linkedin.com",
-    },
+      "He has three years of experience learning Japanese and two years of study abroad experience in Japan. He specializes in daily Japanese conversation and reading.",
+
+    lessons: ["Coming Soon"],
+    abilities: [ "Reading","Grammar", "Speaking"],
+   Registration:"Please send the course name, corresponding schedule, class format (online or offline), your name, and your LINE ID to the linguabridge@gmail.com. The registration deadline is one week before the course begins. The application result and class location details will be sent by email by our staff. ",
+   
   },
   {
     id: 2,
-    name: "Emily Johnson",
-    subject: "Certified English Tutor",
-    image: "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg",
+    name: "Mr. Wang",
+  
+    image: sensei2,
     description:
-      "Experienced ESL instructor helping students improve speaking, grammar, and business English.",
-    email: "emily@example.com",
-    lessons: ["ESL Speaking", "Business English", "Grammar"],
-    abilities: ["Communication", "Accent Training"],
-    socials: {
-      facebook: "https://facebook.com",
-      linkedin: "https://linkedin.com",
-    },
+      "Four years of living experience in Japan.His Japanese pronunciation is fluent and natural.He can teach Japanese conversation and reading.",
+  
+    lessons: ["Coming Soon"],
+    abilities: ["Communication", "Reading"],
+     Registration:"Please send the course name, corresponding schedule, class format (online or offline), your name, and your LINE ID to the linguabridge@gmail.com. The registration deadline is one week before the course begins. The application result and class location details will be sent by email by our staff. ",
+   
+   
   },
   {
     id: 3,
-    name: "Satoshi Tanaka",
-    subject: "JLPT Exam Specialist",
-    image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg",
+    name: "Mr. Chen",
+ 
+    image: sensei3,
     description:
-      "JLPT-focused teaching with advanced grammar, vocabulary building, and mock testing strategies.",
-    email: "satoshi@example.com",
-    lessons: ["JLPT Prep", "Kanji Training"],
-    abilities: ["Vocabulary", "Kanji", "Mock Tests"],
-    socials: {
-      instagram: "https://instagram.com",
-    },
+      "A KCGI student, certified at the JLPT N1 level, with four years of Japanese-language study experience. His teaching style is friendly yet well-structured.",
+   
+    lessons: ["2025.12.18  17:00~18:00   Self-Introduction / Face to face & Online / Completed / Participants: 8", "2026.2.29   17:00~18:00  Online / Registration Open"],
+    abilities: ["Japanese conversation", "grammar", "reading"],
+    Registration:"Please send the course name, corresponding schedule, class format (online or offline), your name, and your LINE ID to the linguabridge@gmail.com. The registration deadline is one week before the course begins. The application result and class location details will be sent by email by our staff. ",
+   
+  },
+   {
+    id: 4,
+    name: "Mr. Long",
+ 
+    image: long,
+    description:
+      "He has studied Japanese for six years and lived and studied in Japan for five years. A graduate of Kyoto Seika University, He specializes in speaking and listening skills.",
+   
+    lessons: ["Coming Soon"],
+    abilities: ["Vocabulary", "Kanji", "Reading", "Speaking"],
+     Registration:"Please send the course name, corresponding schedule, class format (online or offline), your name, and your LINE ID to the linguabridge@gmail.com. The registration deadline is one week before the course begins. The application result and class location details will be sent by email by our staff. ",
+   
   },
 ];

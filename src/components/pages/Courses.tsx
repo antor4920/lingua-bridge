@@ -1,56 +1,84 @@
+import course1 from "../../assets/course1.jpg"
+import course2 from "../../assets/course2.jpg"
+import course3 from "../../assets/course3.jpg"
+import ass1 from "../../assets/ass1.jpeg"
+import ass2 from "../../assets/aas2.jpeg"
+
+import { Link } from "react-router-dom";
+import CourseDetails from "./CourseDetails"
+
+
+
 import { useState } from "react";
 
 interface Course {
   id: number;
   title: string;
   level: string;
+   Smethod: string;
+  Schedule:string;
   category: "japanese" | "english";
   image: string;
+  
+ 
 }
 
 const coursesData: Course[] = [
   {
     id: 1,
-    title: "Hiragana & Katakana Mastery",
-    level: "Beginner",
+    title: "Daily Conversation",
+    level: "Daily Conversation",
     category: "japanese",
-    image: "https://images.pexels.com/photos/3635870/pexels-photo-3635870.jpeg",
+    Smethod:"Please send the course name, corresponding schedule, class format (online or offline), your name, and your LINE ID to the designated email address.The registration deadline is one week before the course begins.The application result and class location details will be sent by email by our staff.",
+     Schedule:"2025.12.18  17:00~18:00   Self-Introduction / Face to face & Online / Completed / Participants: 8·2026.2.29   17:00~18:00  Online",
+    image: course1,
   },
   {
     id: 2,
-    title: "JLPT N5 Complete Preparation",
-    level: "Beginner",
+    title: "Grammar",
+    level: "Grammar",
     category: "japanese",
-    image: "https://images.pexels.com/photos/590571/pexels-photo-590571.jpeg",
+    Smethod:"",
+     Schedule:"",
+    image: course2,
   },
   {
     id: 3,
-    title: "JLPT N3 Grammar & Reading",
-    level: "Intermediate",
+    title: "Reading",
+    level: "Reading",
     category: "japanese",
-    image: "https://images.pexels.com/photos/590590/pexels-photo-590590.jpeg",
+    Smethod:"",
+     Schedule:"",
+    image: course3,
   },
   {
     id: 4,
     title: "English Grammar Essentials",
     level: "Association 1",
     category: "english",
-    image: "https://images.pexels.com/photos/4144923/pexels-photo-4144923.jpeg",
+    Smethod:"",
+     Schedule:"",
+    image: ass1,
+  
   },
   {
     id: 5,
     title: "Everyday English Conversation",
     level: "Association 2",
     category: "english",
-    image: "https://images.pexels.com/photos/4240506/pexels-photo-4240506.jpeg",
+    Smethod:"",
+     Schedule:"",
+    image: ass2,
   },
-  {
-    id: 6,
-    title: "Business English & Email Writing",
-    level: "Association 3",
-    category: "english",
-    image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
-  },
+  // {
+  //   id: 6,
+  //   title: "Business English & Email Writing",
+  //   level: "Association 3",
+  //   category: "english",
+  //   Smethod:"",
+  //    Schedule:"",
+  //   image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
+  // },
 ];
 
 export default function Courses() {
@@ -91,7 +119,7 @@ export default function Courses() {
               : "bg-white border border-gray-300 text-gray-600 hover:bg-gray-200"
           }`}
         >
-          Japanese 🇯🇵
+          Course Schedule
         </button>
         <button
           onClick={() => setFilter("english")}
@@ -101,7 +129,7 @@ export default function Courses() {
               : "bg-white border border-gray-300 text-gray-600 hover:bg-gray-200"
           }`}
         >
-          Associations
+          Lecture Slides
         </button>
       </div>
 
@@ -122,12 +150,19 @@ export default function Courses() {
               {/* <h3 className="text-xl font-bold mb-2">{course.title}</h3> */}
               <p className="text-sm text-gray-500 mb-4">{course.level}</p>
 
-              <a
-                href={`/courses/${course.id}`}
-                className="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition"
-              >
-                Link
-              </a>
+             <Link
+  to="/course-details"
+  state={{
+    title: course.title,
+    image: course.image,
+    level: course.level,
+    Schedule:course.Schedule,
+    Method:course.Smethod,
+  }}
+  className="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition"
+>
+  View Details
+</Link>
             </div>
           </div>
         ))}

@@ -13,12 +13,12 @@ export default function Teachers() {
       <header className="text-center mb-12">
         <h1 className="text-4xl font-bold mb-4">Meet Our Teachers</h1>
         <p className="text-gray-600 max-w-2xl mx-auto">
-          Learn from certified language experts, native speakers, and experienced instructors.
+          Learn together with our excellent volunteer Instructors. You are also welcome to join us as a volunteer.
         </p>
       </header>
 
       {/* ================= TEACHER GRID ================= */}
-      <section className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
+      <section className="grid sm:grid-cols-2 lg:grid-cols-2 gap-10 max-w-2xl mx-auto">
         {teachersData.map((teacher) => (
           <div
             key={teacher.id}
@@ -34,10 +34,10 @@ export default function Teachers() {
 
             <div className="p-6 text-center">
               <h3 className="text-xl font-bold">{teacher.name}</h3>
-              <p className="text-blue-600 font-medium mt-1">{teacher.subject}</p>
+              {/* <p className="text-blue-600 font-medium mt-1">{teacher.subject}</p> */}
               <p className="text-gray-600 text-sm mt-3">{teacher.description}</p>
 
-              {/* Social Links */}
+              {/* Social Links
               <div className="flex justify-center gap-4 mt-4 text-xl text-gray-500">
                 {teacher.socials?.facebook && (
                   <a href={teacher.socials.facebook} className="hover:text-blue-600">
@@ -54,7 +54,7 @@ export default function Teachers() {
                     <FaLinkedin />
                   </a>
                 )}
-              </div>
+              </div> */}
 
              <Link
   to={`/teachers/${teacher.id}`}

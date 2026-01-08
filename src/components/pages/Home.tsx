@@ -1,29 +1,34 @@
+
+import sensei1 from "../../assets/image.png"
+import sensei2 from "../../assets/sensei2.jpg"
+import sensei3 from "../../assets/sensei3.jpg"
 export default function Home() {
   return (
+    
     <main className="w-full">
       {/* ================= HERO SECTION ================= */}
-      <section className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-24 text-center px-6">
+      <section className="bg-gradient-to-r from-blue-400 to-blue-950 text-white py-24 text-center px-6">
         <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-          Master <span className="text-yellow-300">Japanese</span> &{" "}
-          <span className="text-yellow-300">English</span> With Confidence
+          Learnin <span className="text-yellow-300">Japanese</span>{" "}
+          <span className="text-yellow-300">Together</span> With Confidence
         </h1>
         <p className="max-w-2xl mx-auto text-lg md:text-xl text-blue-100">
-          Learn with expert instructors, interactive lessons, and real speaking
-          practice designed for every level.
+          Learn Japanese through volunteer-led lessons, peer support, and real
+conversation practice designed for learners at different levels.
         </p>
 
         <div className="mt-8 flex flex-col md:flex-row gap-4 justify-center">
           <a
-            href="/courses"
+            href="/Courses"
             className="px-6 py-3 bg-yellow-400 text-black font-semibold rounded-lg hover:bg-yellow-300 transition"
           >
-            Start Learning
+            Course Schedule
           </a>
           <a
-            href="/about"
+            href="/lingua-bridge/About"
             className="px-6 py-3 border border-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition"
           >
-            Learn More
+            Lecture Slides
           </a>
         </div>
       </section>
@@ -34,10 +39,10 @@ export default function Home() {
 
         <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
           {[
-            { icon: "🎧", text: "Interactive speaking practice" },
-            { icon: "👩‍🏫", text: "Native-level instructors" },
-            { icon: "📚", text: "Structured lessons for all levels" },
-            { icon: "📱", text: "Learn anytime, on any device" },
+            { icon: "🎧", text: "Real Conversation Practice" },
+            { icon: "👩‍🏫", text: "Peer and Volunteer Learning" },
+            { icon: "📚", text: "Accessible Learning Structure" },
+            { icon: "📱", text: "Flexible online and offline learning" },
           ].map((feature, i) => (
             <div
               key={i}
@@ -97,15 +102,19 @@ export default function Home() {
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {[
-            { name: "Yuki Nakamura", title: "Native Japanese Instructor" },
-            { name: "Emily Johnson", title: "Certified English Trainer" },
-            { name: "Satoshi Tanaka", title: "JLPT Exam Specialist" },
+            { name: "Mr. Shao", title: "He specializes in daily Japanese conversation and reading.", image:sensei1 },
+            { name: "Mr. Wang", title: "He can teach Japanese conversation and reading.",image:sensei2  },
+            { name: "Mr. Chen", title: "He is able to teach Japanese conversation, grammar, and reading.",image:sensei3  },
           ].map((t, i) => (
             <div
               key={i}
               className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition"
             >
-              <div className="w-24 h-24 mx-auto bg-gray-300 rounded-full mb-4" />
+             <img
+          src={t.image}
+          alt={t.name}
+          className="w-24 h-24 mx-auto rounded-full object-cover mb-4"
+        />
               <h4 className="font-bold text-lg">{t.name}</h4>
               <p className="text-gray-600">{t.title}</p>
             </div>
@@ -119,27 +128,26 @@ export default function Home() {
 
         <div className="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-md">
           <p className="text-gray-700 italic mb-4">
-            “I passed JLPT N4 thanks to LinguaBridge! The teachers and lessons
-            are amazing.”
+            “The instructor taught in a clear and effective way, and the class atmosphere was friendly and engaging. Everyone participated actively, and I felt I learned a lot. I hope to join the next class.”
           </p>
-          <p className="font-semibold">— Arisa, Japan</p>
+          <p className="font-semibold">—Chris Evedon Liao, China</p>
         </div>
       </section>
 
       {/* ================= FINAL CTA ================= */}
-      <section className="py-20 text-center bg-blue-600 text-white">
+      <section className="py-20 text-center bg-gradient-to-r from-blue-400 to-blue-950 text-white">
         <h2 className="text-3xl font-bold mb-4">
           Start Your Language Journey Today!
         </h2>
         <p className="text-blue-100 max-w-xl mx-auto">
-          Join thousands of students learning Japanese & English with confidence.
+        Join our volunteer-led Japanese classes and learn through real interaction.
         </p>
-        <a
+        {/* <a
           href="/courses"
           className="mt-6 inline-block px-6 py-3 bg-yellow-400 text-black font-semibold rounded-lg hover:bg-yellow-300 transition"
         >
           Get Started
-        </a>
+        </a> */}
       </section>
     </main>
   );
