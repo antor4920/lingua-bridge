@@ -15,7 +15,8 @@ export const teachersData = [
 
     lessons: ["Coming Soon"],
     abilities: [ "Reading","Grammar", "Speaking"],
-   Registration:"Please send the course name, corresponding schedule, class format (online or offline), your name, and your LINE ID to the linguabridge@gmail.com. The registration deadline is one week before the course begins. The application result and class location details will be sent by email by our staff. ",
+   Registration:"Please send the course name, corresponding schedule, class format (online or offline), your name, and your LINE ID to the designated email address. The registration deadline is one week before the course begins. The application result and class location details will be sent by email by our staff. ",
+   email:"linguabridge@gmail.com",
    
   },
   {
@@ -28,8 +29,8 @@ export const teachersData = [
   
     lessons: ["Coming Soon"],
     abilities: ["Communication", "Reading"],
-     Registration:"Please send the course name, corresponding schedule, class format (online or offline), your name, and your LINE ID to the linguabridge@gmail.com. The registration deadline is one week before the course begins. The application result and class location details will be sent by email by our staff. ",
-   
+     Registration:"Please send the course name, corresponding schedule, class format (online or offline), your name, and your LINE ID to the designated email address. The registration deadline is one week before the course begins. The application result and class location details will be sent by email by our staff. ",
+    email:"linguabridge@gmail.com",
    
   },
   {
@@ -42,8 +43,8 @@ export const teachersData = [
    
     lessons: ["2025.12.18  17:00~18:00   Self-Introduction / Face to face & Online / Completed / Participants: 8", "2026.2.29   17:00~18:00  Online / Registration Open"],
     abilities: ["Japanese conversation", "grammar", "reading"],
-    Registration:"Please send the course name, corresponding schedule, class format (online or offline), your name, and your LINE ID to the linguabridge@gmail.com. The registration deadline is one week before the course begins. The application result and class location details will be sent by email by our staff. ",
-   
+    Registration:"Please send the course name, corresponding schedule, class format (online or offline), your name, and your LINE ID to the designated email address. The registration deadline is one week before the course begins. The application result and class location details will be sent by email by our staff. ",
+    email:"linguabridge@gmail.com",
   },
    {
     id: 4,
@@ -55,7 +56,7 @@ export const teachersData = [
    
     lessons: ["Coming Soon"],
     abilities: ["Vocabulary", "Kanji", "Reading", "Speaking"],
-     Registration:"Please send the course name, corresponding schedule, class format (online or offline), your name, and your LINE ID to the linguabridge@gmail.com. The registration deadline is one week before the course begins. The application result and class location details will be sent by email by our staff. ",
-   
+     Registration:"Please send the course name, corresponding schedule, class format (online or offline), your name, and your LINE ID to the designated email address. The registration deadline is one week before the course begins. The application result and class location details will be sent by email by our staff. ",
+    email:"linguabridge@gmail.com",
   },
 ];

@@ -3,9 +3,11 @@ import course2 from "../../assets/course2.jpg"
 import course3 from "../../assets/course3.jpg"
 import ass1 from "../../assets/ass1.jpeg"
 import ass2 from "../../assets/aas2.jpeg"
+import pdf1 from "../../../public/pdfs/association1.pdf"
+import pdf2 from "../../../public/pdfs/association2.pdf"
 
 import { Link } from "react-router-dom";
-import CourseDetails from "./CourseDetails"
+
 
 
 
@@ -19,7 +21,7 @@ interface Course {
   Schedule:string;
   category: "japanese" | "english";
   image: string;
-  
+ pdf?: string;
  
 }
 
@@ -29,47 +31,52 @@ const coursesData: Course[] = [
     title: "Daily Conversation",
     level: "Daily Conversation",
     category: "japanese",
-    Smethod:"Please send the course name, corresponding schedule, class format (online or offline), your name, and your LINE ID to the designated email address.The registration deadline is one week before the course begins.The application result and class location details will be sent by email by our staff.",
+       Smethod:" Please send the course name, corresponding schedule, class format (online or offline), your name, and your LINE ID to the linguabridge@gmail.com.The registration deadline is one week before the course begins.The application result and class location details will be sent by email by our staff.",
      Schedule:"2025.12.18  17:00~18:00   Self-Introduction / Face to face & Online / Completed / Participants: 8·2026.2.29   17:00~18:00  Online",
     image: course1,
+  
   },
   {
     id: 2,
     title: "Grammar",
     level: "Grammar",
     category: "japanese",
-    Smethod:"",
-     Schedule:"",
+    Smethod:" Please send the course name, corresponding schedule, class format (online or offline), your name, and your LINE ID to the linguabridge@gmail.com.The registration deadline is one week before the course begins.The application result and class location details will be sent by email by our staff.",
+     Schedule:"2026.4.6 17：00~18：00   Face to face  /  Registration Not Open Yet·Coming Soon",
     image: course2,
+ 
   },
   {
     id: 3,
     title: "Reading",
     level: "Reading",
     category: "japanese",
-    Smethod:"",
-     Schedule:"",
+     Smethod:" Please send the course name, corresponding schedule, class format (online or offline), your name, and your LINE ID to the linguabridge@gmail.com.The registration deadline is one week before the course begins.The application result and class location details will be sent by email by our staff.",
+     Schedule:"Coming soon",
     image: course3,
+    
   },
   {
-    id: 4,
-    title: "English Grammar Essentials",
-    level: "Association 1",
-    category: "english",
-    Smethod:"",
-     Schedule:"",
-    image: ass1,
-  
-  },
-  {
-    id: 5,
-    title: "Everyday English Conversation",
-    level: "Association 2",
-    category: "english",
-    Smethod:"",
-     Schedule:"",
-    image: ass2,
-  },
+  id: 4,
+  title: "English Grammar Essentials",
+  level: "Association 1",
+  category: "english",
+  Smethod: "",
+  Schedule: "",
+  image: ass1,
+  pdf: pdf1, // 
+},
+{
+  id: 5,
+  title: "Everyday English Conversation",
+  level: "Association 2",
+  category: "english",
+  Smethod: "",
+  Schedule: "",
+  image: ass2,
+  pdf: pdf2, // 
+},
+
   // {
   //   id: 6,
   //   title: "Business English & Email Writing",
@@ -158,6 +165,7 @@ export default function Courses() {
     level: course.level,
     Schedule:course.Schedule,
     Method:course.Smethod,
+      pdf: course.pdf,
   }}
   className="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition"
 >

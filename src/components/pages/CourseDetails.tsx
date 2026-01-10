@@ -1,5 +1,5 @@
 
-import pdf from "../../assets/Week 6-Writing Emails_Spring 2025.pdf"
+
 import { useLocation } from "react-router-dom";
 
 export default function CourseDetails() {
@@ -9,10 +9,14 @@ export default function CourseDetails() {
     return <p className="text-center mt-20">No course selected</p>;
   }
 
-  const { title, image, level } = state as {
+  const { title, image,  Schedule,
+    Method, pdf} = state as {
     title: string;
     image: string;
     level: string;
+    Schedule: string;
+    Method: string;
+    pdf?: string;
   };
 
   return (
@@ -26,14 +30,32 @@ export default function CourseDetails() {
 
         <div className="p-6 text-center">
           <h1 className="text-3xl font-bold mb-2">{title}</h1>
-          <p className="text-gray-600 mb-6">Level: {level}</p>
+          {/* <p className="text-gray-600 mb-6">Level: {level}</p> */}
+          <p className="text-gray-600 mb-6"> {Schedule}</p>
+          <p className="text-gray-600 mb-6">  {Method}</p>
+           {pdf && (
+  <div className="mt-8">
+    <h2 className="text-xl font-semibold mb-4">Course Material</h2>
 
-          <button
-            onClick={() => window.open(pdf)}
-            className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
-          >
-            Back
-          </button>
+    <iframe
+      src={pdf}
+      style={{ width: "100%", height: "600px" }}
+      title="Course PDF"
+    />
+
+    <a
+      href={pdf}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="block mt-4 text-blue-600 underline"
+    >
+      Open PDF in new tab
+    </a>
+  </div>
+)}
+
+
+         
         </div>
       </div>
     </main>

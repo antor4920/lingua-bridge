@@ -2,36 +2,55 @@
 import sensei1 from "../../assets/image.png"
 import sensei2 from "../../assets/sensei2.jpg"
 import sensei3 from "../../assets/sensei3.jpg"
+import video from "../../assets/CLASS.mp4"
 export default function Home() {
   return (
     
     <main className="w-full">
       {/* ================= HERO SECTION ================= */}
-      <section className="bg-gradient-to-r from-blue-400 to-blue-950 text-white py-24 text-center px-6">
-        <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-          Learnin <span className="text-yellow-300">Japanese</span>{" "}
-          <span className="text-yellow-300">Together</span> With Confidence
-        </h1>
-        <p className="max-w-2xl mx-auto text-lg md:text-xl text-blue-100">
-          Learn Japanese through volunteer-led lessons, peer support, and real
-conversation practice designed for learners at different levels.
-        </p>
+     <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-400 to-blue-950 text-white px-6">
+  <div className="text-center max-w-4xl">
+    <h1 className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
+      Learning <span className="text-yellow-300">Japanese</span>{" "}
+      <span className="text-yellow-300">Together</span> With Confidence
+    </h1>
 
-        <div className="mt-8 flex flex-col md:flex-row gap-4 justify-center">
-          <a
-            href="/Courses"
-            className="px-6 py-3 bg-yellow-400 text-black font-semibold rounded-lg hover:bg-yellow-300 transition"
-          >
-            Course Schedule
-          </a>
-          <a
-            href="/lingua-bridge/About"
-            className="px-6 py-3 border border-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition"
-          >
-            Lecture Slides
-          </a>
-        </div>
-      </section>
+    <p className="max-w-2xl mx-auto text-lg md:text-xl text-blue-100 leading-relaxed">
+      Learn Japanese through volunteer-led lessons, peer support, and real
+      conversation practice designed for learners at different levels.
+    </p>
+  </div>
+
+  {/* Scroll Hint */}
+  <div className="absolute bottom-8 text-blue-200 animate-bounce">
+    ↓ Scroll
+  </div>
+</section>
+
+      {/* ================= VIDEO SECTION ================= */}
+<section className="py-16 px-6 bg-white">
+  <div className="max-w-6xl mx-auto text-center">
+    <h2 className="text-3xl font-bold mb-4">
+      See How LinguaBridge Works
+    </h2>
+
+    <p className="text-gray-600 max-w-2xl mx-auto mb-8">
+      Watch how our platform connects learners and teachers through
+      real conversation and cultural exchange.
+    </p>
+
+    <div className="relative w-full max-w-4xl mx-auto aspect-video rounded-xl overflow-hidden shadow-lg">
+      <iframe
+        className="w-full h-full"
+        src={video}
+        title="LinguaBridge Introduction Video"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      />
+    </div>
+  </div>
+</section>
+
 
       {/* ================= FEATURES ================= */}
       <section className="py-20 px-6 bg-gray-100 text-center">

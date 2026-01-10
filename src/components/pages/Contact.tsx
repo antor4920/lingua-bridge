@@ -20,13 +20,13 @@ export default function Contact() {
 
           <div className="space-y-5 text-gray-700">
             <p className="flex items-center gap-3">
-              <FaEnvelope className="text-blue-600" /> support@linguabridge.com
+              <FaEnvelope className="text-blue-600" /> linguabridge@gmail.com.
             </p>
             <p className="flex items-center gap-3">
               <FaPhone className="text-blue-600" /> +81 90-1234-5678
             </p>
             <p className="flex items-center gap-3">
-              <FaMapMarkerAlt className="text-blue-600" /> Tokyo, Japan
+              <FaMapMarkerAlt className="text-blue-600" /> Kyoto, Japan
             </p>
           </div>
 
@@ -41,7 +41,12 @@ export default function Contact() {
         </div>
 
         {/* Contact Form */}
-        <form className="bg-white p-8 rounded-xl shadow-md space-y-5">
+       <div className="bg-white p-8 rounded-xl shadow-md space-y-5" ><p>For course reservations, please send us an email following the format shown on the course details page.
+If you would like to join us as a volunteer, please send your self-introduction and basic information to this email address.
+If you have any questions, feel free to contact us. Thank you.
+</p></div>
+
+        {/* <form className="bg-white p-8 rounded-xl shadow-md space-y-5">
           <h2 className="text-2xl font-bold text-blue-600 mb-3">Send a Message</h2>
 
           <input
@@ -71,7 +76,7 @@ export default function Contact() {
           >
             Send Message
           </button>
-        </form>
+        </form> */}
       </section>
 
       {/* ================= MAP SECTION ================= */}

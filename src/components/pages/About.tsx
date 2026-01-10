@@ -17,7 +17,7 @@ export default function About() {
       {/* ================= HERO ================= */}
       <section className="text-center mb-16">
         <h1 className="text-4xl font-bold mb-4">About LinguaBridge</h1>
-        <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+        <p className="text-gray-600 max-w-2xl mx-auto text-lg text-justify">
           LinguaBridge is a collaborative learning platform designed to support students who are new to Japanese while also providing opportunities for Japanese-proficient students to strengthen their language skills through real interaction. By connecting learners at different proficiency levels, we promote mutual learning, cultural exchange, and inclusive education in line with the United Nations Sustainable Development Goals.
         </p>
       </section>
@@ -26,14 +26,14 @@ export default function About() {
       <section className="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto mb-20">
         <div className="bg-white p-8 rounded-xl shadow-md">
           <h2 className="text-2xl font-bold mb-3 text-blue-600">Our Mission</h2>
-          <p className="text-gray-600 leading-relaxed">
+          <p className="text-gray-600 leading-relaxed text-justify">
             Our mission is to create an inclusive learning environment where students with different levels of Japanese proficiency can support one another. We aim to help beginners build confidence in Japanese while enabling advanced learners to improve their communication skills through meaningful practice, contributing to quality education and equal learning opportunities.
           </p>
         </div>
 
         <div className="bg-white p-8 rounded-xl shadow-md">
           <h2 className="text-2xl font-bold mb-3 text-blue-600">Our Vision</h2>
-          <p className="text-gray-600 leading-relaxed">
+          <p className="text-gray-600 leading-relaxed text-justify">
           Our vision is a learning community where language is no longer a barrier to participation, collaboration, or opportunity. By encouraging peer learning and cross-cultural communication, we seek to support sustainable development, inclusivity, and global understanding in accordance with the United Nations Sustainable Development Goals.
           </p>
         </div>

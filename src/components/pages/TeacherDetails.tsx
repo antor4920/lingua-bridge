@@ -71,9 +71,10 @@ export default function TeacherDetails() {
 
         
            <p className="mt-6 text-xs">
-            <strong>Registration Method:</strong>{" "}
-            <span className="text-gray-700">{teacher.Registration}</span>
+            <strong className=" text-sm">Registration Method:</strong>{" "}
+            <span className="text-gray-700 text-sm">{teacher.Registration} </span>
           </p>
+          <p className="underline text-blue-600 text-sm">Email: {teacher.email}</p>
 
           {/* Confirm Button */}
           {/* <button className="mt-8 w-full bg-blue-600 text-white py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition">
